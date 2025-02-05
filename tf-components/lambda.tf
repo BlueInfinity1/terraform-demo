@@ -1,6 +1,5 @@
 data "archive_file" "lambda_main_zip" {
   type        = "zip"
-  # Assumes your main Lambda source is in the ../lambdas/main directory
   source_dir  = "${path.module}/../lambdas/main"
   output_path = "${path.module}/../lambdas/main.zip"
 }
