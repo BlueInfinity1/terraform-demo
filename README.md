@@ -13,7 +13,7 @@ This project demonstrates how to deploy a multi-environment serverless API using
     - PROD: `https://<prod-api-id>.execute-api.<region>.amazonaws.com/prod/invoke`
 
 - **AWS Lambda Functions:**  
-  - **Main Lambda Functions:** Three versions are deployed (dev, test, prod). Each function is configured with an environment variable that specifies the corresponding DynamoDB table.
+  - **Main Lambda Functions:** Three versions are deployed (dev, test, prod). Each function is configured with an environment variable that specifies the corresponding DynamoDB table, to which the Lambda writes random numbers.
   - **Lambda Aliases:** Aliases are defined (dev, test, prod) for versioning, though the API integration currently references the function’s invoke ARN.
   - **Lambda Authorizer:** A single (shared) authorizer function is used to authorize API calls. The demo authorizer simply returns `true` if the `Authorization` header equals `"allow"`.
   
